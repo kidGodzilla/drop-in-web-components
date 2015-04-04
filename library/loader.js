@@ -31,8 +31,8 @@
         if (!window._) loadScript("https://cdn.jsdelivr.net/lodash/3.5.0/lodash.compat.min.js");
 
         // Core
-        loadScript("library/core.js");
-        loadScript("library/init.js");
+        if (!window.Core) loadScript("library/core.js");
+        if (!window.Components) loadScript("library/init.js");
         loadScript("library/utils.js");
 
         // Components Library
