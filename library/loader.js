@@ -25,10 +25,12 @@
 
         // Core
         // loadStylesheet("library/style.css");
+        loadStylesheet("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css");
 
         // JavaScript Dependencies
         if (!window.$) loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js");
         if (!window._) loadScript("https://cdn.jsdelivr.net/lodash/3.5.0/lodash.compat.min.js");
+        loadScript("https://www.bittitan.com/internal-bootstrap/bootstrap.min.js");
 
         // Core
         if (!window.Core) loadScript("library/core.js");

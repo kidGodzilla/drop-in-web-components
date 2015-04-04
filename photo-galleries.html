@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drop-in Web Components: Photo Galleries</title>
+    <link rel="stylesheet" href="http://bt-pages.webhook.org/internal-bootstrap/bt_internal/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="http://bt-pages.webhook.org/internal-bootstrap/assets/css/bootswatch.min.css">
+    <style>
+        .navbar-inverse .dropdown-menu {
+            background: #075891;
+        }
+        a {
+            color: #7494A9;
+        // text-decoration: underline;
+        }
+        code {
+            background: rgba(255,255,255,0.25);
+        }
+        h1, h2 {
+            border-bottom: 1px solid rgba(255,255,255,0.32);
+        }
+        div.medium-insert-buttons {
+            margin-left: -60px;
+        }
+        .list-group .list-group-item i {
+            width: 28px;
+            text-align: center;
+        }
+    </style>
+
+    <script src="library/loader.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <div class="html-include" data-source-url="nav.html"></div>
+
+    <div class="row">
+        <div class="html-include hidden-xs hidden-sm col-md-3" data-source-url="directory-nav.html"></div>
+        <div class="col-xs-12 col-md-9">
+            <div id="body" class="well">
+                <span class="pull-right">
+                    <a href="#" class="btn btn-success"><i class="fa fa-plus"></i> &nbsp;New Component</a>
+                </span>
+                <h1 class="">Photo Gallery Components</h1>
+                <br/>
+
+                <div class="well">
+                    <div class="list-group">
+                        <a class="list-group-item" href="http://wpages.co/components/flickr-gallery/demo.html" target="_new">
+                            <span class="badge">14 Installs</span>
+                            <i class="fa fa-flickr"></i> Flickr User's Public Photo Gallery
+                        </a>
+                        <a class="list-group-item" href="http://wpages.co/components/google-plus-gallery/demo.html" target="_new">
+                            <span class="badge">7 Installs</span>
+                            <i class="fa fa-google-plus"></i> Google Plus User's Public Photo Gallery
+                        </a>
+                        <a class="list-group-item" href="http://wpages.co/components/picasa-gallery/demo.html" target="_new">
+                            <span class="badge">3 Installs</span>
+                            <i class="fa fa-picture-o"></i> Picasa User's Public Photo Gallery
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<footer class="footer">
+    <br/><br/>
+    <p class="text-center">© 2015 BitTitan, Inc. All Rights Reserved.</p>
+</footer>
+
+<script>
+    $(document).ready(function () {
+        Components.onCondition(function () {
+            return $('.photo-galleries').length;
+        }, function () {
+            $('.photo-galleries').addClass('active');
+        });
+    });
+</script>
+
+</div> <!-- /container -->
+</body>
+</html>

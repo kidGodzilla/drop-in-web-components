@@ -2,18 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Demo</title>
+    <title>Drop-in Web Components: Home</title>
     <link rel="stylesheet" href="http://bt-pages.webhook.org/internal-bootstrap/bt_internal/bootstrap.css" media="screen">
     <link rel="stylesheet" href="http://bt-pages.webhook.org/internal-bootstrap/assets/css/bootswatch.min.css">
-    <script src="library/loader.js"></script>
     <style>
-        h1 {
-            margin-left: 36px;
+        .navbar-inverse .dropdown-menu {
+            background: #075891;
+        }
+        a {
+            color: #7494A9;
+        // text-decoration: underline;
+        }
+        code {
+            background: rgba(255,255,255,0.25);
+        }
+        h1, h2 {
+            border-bottom: 1px solid rgba(255,255,255,0.32);
+        }
+        div.medium-insert-buttons {
+            margin-left: -60px;
         }
     </style>
+
+    <script src="library/loader.js"></script>
 </head>
 <body>
-<h1>Flickr Gallery Component</h1>
-<div id="DemoComponent" data-component-name="flickr-gallery" data-source-url="http://wpages.co/components/flickr-gallery" data-user-id="34858669@N00"></div>
+<div class="container">
+
+    <div class="html-include" data-source-url="nav.html"></div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="body" class="well">
+                <div id="jumbotron-component">
+                    <div class="jumbotron">
+                        <h1>Drop-in Web Components</h1>
+                        <p class="lead">Simple, Hosted components.</p>
+                        <p><a class="btn btn-lg btn-info" href="photo-galleries.html" role="button">See an example</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row marketing">
+        <div class="col-xs-12 col-sm-6">
+            <h4>Easy to use</h4>
+            <p>Drop-in web components require very little configuration. In most cases, all you need is a single element.</p>
+            <p>&nbsp;</p>
+
+            <h4>Built on jQuery</h4>
+            <p>Drop-in web components are designed to package existing jQuery plugins as easy-to-install, hosted components.</p>
+            <p>&nbsp;</p>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+
+            <h4>Client-Side JavaScript</h4>
+            <p>Drop-in web components are written in client-side JavaScript, making them fast and flexible in any modern browser.</p>
+            <p>&nbsp;</p>
+
+            <h4>Easy to extend</h4>
+            <p>We aim to make it as painless as possible to build new components, or package your existing jQuery plugin as a component.</p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <br/><br/>
+        <p class="text-center">© 2015 James Futhey. All Rights Reserved.</p>
+    </footer>
+
+</div> <!-- /container -->
+
 </body>
 </html>

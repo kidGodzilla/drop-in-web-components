@@ -63,4 +63,22 @@
         });
     });
 
+    Components.registerGlobal('onCondition', function (condition, callback) {
+        var s = setInterval(function () {
+
+            // Early return if our condition is not a function
+            if (!condition || !typeof(condition) === "function") {
+                clearInterval(s);
+                return false;
+            }
+
+            // Evaluate our condition. If true, perform callback & clear our interval, otherwise, do nothing.
+            if (condition()) {
+                if (callback && typeof(callback) === "function") callback();
+                clearInterval(s);
+            }
+
+        }, 100);
+    });
+
 })();
