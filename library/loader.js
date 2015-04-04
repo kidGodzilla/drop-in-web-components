@@ -27,8 +27,8 @@
         // loadStylesheet("library/style.css");
 
         // JavaScript Dependencies
-        loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js");
-        loadScript("https://cdn.jsdelivr.net/lodash/3.5.0/lodash.compat.min.js");
+        if (!window.$) loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js");
+        if (!window._) loadScript("https://cdn.jsdelivr.net/lodash/3.5.0/lodash.compat.min.js");
 
         // Core
         loadScript("library/core.js");
