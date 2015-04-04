@@ -3,29 +3,28 @@
 (function () {
 
     /**
-     * Run HTML includes
+     * Assign IDs
      */
-    Components.HTMLIncludes();
+    Components.assignIDsToElements();
 
+    /**
+     * Remember the insides
+     */
+    Components.registerGlobal('innerHTML', {});
 
     $(document).ready(function () {
+        $('[data-component-name]').each(function () {
+            var $this = $(this);
+            var elID = $this.attr('id');
 
-        /**
-         * Run scripts for each component
-         * (This will register each component)
-         */
-        //$('.component').each(function () {
-        //    // Execute any associated scripts
-        //    var src = $(this).find('script').html();
-        //    if (src) eval(src);
-        //});
+            if (elID) Components.innerHTML[elID] = $this.html();
+        });
 
-        //$('.component').each(function () {
-        //    // Execute any associated scripts
-        //    var src = $(this).find('script').html();
-        //    if (src) eval(src);
-        //});
+        // Load HTML Includes
+        Components.HTMLIncludes();
+    });
 
+    $(document).ready(function () {
 
         /**
          * Run component scripts
