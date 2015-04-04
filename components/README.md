@@ -1,6 +1,6 @@
 # Drop-in Component Gallery
 
-## <a href="https://github.com/kidGodzilla/drop-in-web-components/tree/master/components/flickr-gallery#flickr-photo-gallery-component">Flickr Photo Gallery</a>
+## <a href="components/flickr-gallery#flickr-photo-gallery-component">Flickr Photo Gallery</a>
 
 Add this component to load an entire Flickr user's gallery of public photos, anywhere on your website.
 
@@ -10,7 +10,7 @@ Add this component to load an entire Flickr user's gallery of public photos, any
 Add this component to load an entire Google Plus user's gallery of public photos, anywhere on your website.
 
 
-## Picasa Photo Gallery
+## <a href="picasa-gallery#picasa-photo-gallery-component">Picasa Photo Gallery</a>
 
 Add this component to load an entire Picasa user's gallery of public photos, anywhere on your website.
 

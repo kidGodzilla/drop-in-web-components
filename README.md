@@ -18,7 +18,7 @@ Most components will contain demos and a snippet of code to paste onto your webs
 
 ## Getting Started
 
-Browse to the <a href="https://github.com/kidGodzilla/drop-in-web-components/tree/master/components#drop-in-component-gallery">Component Gallery</a> to see a list of components currently available.
+Browse to the <a href="components#drop-in-component-gallery">Component Gallery</a> to see a list of components currently available.
 
 ## Contributing
 
