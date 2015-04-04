@@ -41,7 +41,7 @@
                     if (obj && obj.afterRender && typeof(obj.afterRender) === "function") obj.afterRender(elID);
                 });
             }
-        }, 1000);
+        }, 100);
 
     });
 

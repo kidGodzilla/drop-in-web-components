@@ -1,11 +1,16 @@
 (function () {
 
-    Components.registerGlobal('components', []);
+    // Components.registerGlobal('components', []);
     Components.registerGlobal('componentLookup', {});
-
     Components.registerGlobal('renderQueue', []);
 
+    /**
+     * REGISTER COMPONENT
+     * Registers a new component
+     */
     Components.registerGlobal('registerComponent', function (obj) {
+
+        var scriptCount = 0;
 
         /**
          * Setup
@@ -27,22 +32,28 @@
 
         // Load Scripts
         if (obj.scripts) {
-            console.log("loading scripts...");
+            scriptCount = obj.scripts.length;
             for (var i = 0; i < obj.scripts.length; i++)
-                $.getScript(obj.scripts[i]);
+                $.getScript(obj.scripts[i], function () {
+                    scriptCount--;
+                });
         }
 
         // Load Stylesheets
         if (obj.stylesheets) {
-            console.log("loading stylesheets...");
             for (var j = 0; j < obj.stylesheets.length; j++)
                 Components.loadStylesheet(obj.stylesheets[j]);
         }
 
         /**
-         * Add the component to the render queue
+         * Add the component to the render queue (eventually)
          */
-        if (obj.name) Components.renderQueue.push(obj.name);
+        var s = setInterval(function () {
+            if (!scriptCount) {
+                if (obj.name) Components.renderQueue.push(obj.name);
+                clearInterval(s);
+            }
+        }, 100);
 
     });
 })();
