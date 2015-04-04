@@ -18,11 +18,7 @@ Most components will contain demos and a snippet of code to paste onto your webs
 
 ## Getting Started
 
-Include the following script in your page
-
-`<script src="http://wpages.co/components/library/loader.js"></script>`  
-    
-Then, you will be able to load a component from the component server.
+Browse to the <a href="https://github.com/kidGodzilla/drop-in-web-components/tree/master/components#drop-in-component-gallery">Component Gallery</a> to see a list of components currently available.
 
 ## Contributing
 
