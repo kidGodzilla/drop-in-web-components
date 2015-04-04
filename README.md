@@ -16,6 +16,13 @@ Also, it is difficult to predict when and how the web components specification w
 
 Most components will contain demos and a snippet of code to paste onto your website. There are no other dependencies.
 
+## Getting Started
+
+Include the following script in your page
+    <script src="http://wpages.co/components/library/loader.js"></script>  
+    
+Then, you will be able to load a component from the component server.
+
 ## Contributing
 
 Component authors can submits a pull-request, and add their components to this repository.
