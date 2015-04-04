@@ -19,6 +19,7 @@ Most components will contain demos and a snippet of code to paste onto your webs
 ## Getting Started
 
 Include the following script in your page
+
     `<script src="http://wpages.co/components/library/loader.js"></script>`  
     
 Then, you will be able to load a component from the component server.
