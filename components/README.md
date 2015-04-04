@@ -1,6 +1,6 @@
 # Drop-in Component Gallery
 
-## Flickr Photo Gallery
+## <a href="https://github.com/kidGodzilla/drop-in-web-components/tree/master/components/flickr-gallery#flickr-photo-gallery-component">Flickr Photo Gallery</a>
 
 Add this component to load an entire Flickr user's gallery of public photos, anywhere on your website.
 
