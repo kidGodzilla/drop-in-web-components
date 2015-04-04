@@ -11,3 +11,6 @@ Copy the following component to your website. Make sure you replace the `user-id
     <div data-component-name="flickr-gallery" data-source-url="http://wpages.co/components/flickr-gallery" data-user-id="34858669@N00"></div>
     <script src="http://wpages.co/components/library/loader.js"></script>
 
+## Demo
+
+http://wpages.co/components/flickr-gallery/demo.html
