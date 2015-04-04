@@ -33,7 +33,7 @@
         setInterval(function () {
             while (Components.renderQueue.length) {
                 var name = Components.renderQueue.shift();
-                $('.component[data-component-name=' + name + ']').each(function () {
+                $('[data-component-name=' + name + ']').each(function () {
                     var elID = $(this).attr('id');
                     var obj = Components.componentLookup[name];
 

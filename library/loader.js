@@ -21,18 +21,27 @@
         head.appendChild(link);
     }
 
-    // JavaScript Dependencies
-    loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js");
-    loadScript("https://cdn.jsdelivr.net/lodash/3.5.0/lodash.compat.min.js");
+    if (!window.asyncLoaderComplete) {
 
-    // Core
-    loadScript("library/core.js");
-    loadScript("library/init.js");
-    loadScript("library/utils.js");
+        // Core
+        // loadStylesheet("library/style.css");
 
-    // Components Library
-    loadScript("library/registerComponent.js");
+        // JavaScript Dependencies
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js");
+        loadScript("https://cdn.jsdelivr.net/lodash/3.5.0/lodash.compat.min.js");
 
-    // Script Runner
-    loadScript("library/components.js");
+        // Core
+        loadScript("library/core.js");
+        loadScript("library/init.js");
+        loadScript("library/utils.js");
+
+        // Components Library
+        loadScript("library/registerComponent.js");
+
+        // Script Runner
+        loadScript("library/components.js");
+
+        window.asyncLoaderComplete = true;
+    }
+
 })();

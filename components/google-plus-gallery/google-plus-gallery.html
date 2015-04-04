@@ -1,12 +1,12 @@
-<div class="flickr-gallery-component"></div>
+<div class="google-plus-gallery-component"></div>
 <script>
     Components.registerComponent({
-        name: "flickr-gallery",
+        name: "google-plus-gallery",
         afterRender: function (componentID) {
             $(document).ready(function () {
                 var userID = $("#" + componentID).attr('data-user-id');
-                $("#" + componentID + " .flickr-gallery-component").nanoGallery({
-                    kind: 'flickr',
+                $("#" + componentID + " .google-plus-gallery-component").nanoGallery({
+                    kind: 'picasa',
                     userID: userID
                 });
             });
