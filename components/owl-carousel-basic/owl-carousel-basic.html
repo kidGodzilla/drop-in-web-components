@@ -1,17 +1,13 @@
 <div class="owl-carousel-basic-slider-component"></div>
 <script>
     Droplets.registerComponent({
-        name: "picasa-gallery",
+        name: "owl-carousel-basic-slider",
         afterRender: function (componentID) {
             $(document).ready(function () {
-                var userID = $("#" + componentID).attr('data-user-id');
-                $("#" + componentID + " .owl-carousel-basic-slider-component").nanoGallery({
-                    kind: 'picasa',
-                    userID: userID
-                });
+                $("#" + componentID + " .owl-carousel-basic-slider-component")
             });
         },
-        scripts: ['https://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.5.4/jquery.nanogallery.min.js'],
-        stylesheets: ['https://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.5.4/css/nanogallery.min.css']
+        scripts: ['http://kidgodzilla.github.io/drop-in-web-components/components/owl-carousel-basic/js/owl.carousel.min.js'],
+        stylesheets: ['http://kidgodzilla.github.io/drop-in-web-components/components/owl-carousel-basic/css/owl.carousel.css', 'http://kidgodzilla.github.io/drop-in-web-components/components/owl-carousel-basic/css/owl.theme.css']
     });
 </script>
