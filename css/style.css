@@ -1,0 +1,19 @@
+.navbar-inverse .dropdown-menu {
+    background: #075891;
+}
+a {
+    color: #7494A9;
+}
+code {
+    background: rgba(255,255,255,0.25);
+}
+h1, h2 {
+    border-bottom: 1px solid rgba(255,255,255,0.32);
+}
+div.medium-insert-buttons {
+    margin-left: -60px;
+}
+.list-group .list-group-item i {
+    width: 28px;
+    text-align: center;
+}
