@@ -19,7 +19,8 @@
      * This is useful inside a component since it only has a component reference
      */
     Droplets.registerGlobal('getInnerHTML', function (elID) {
-        return Droplets.innerHTML[elID] || "";
+        var innerHTML = Droplets.innerHTML[elID] || "";
+        return trim(innerHTML);
     });
 
 
