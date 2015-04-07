@@ -5,4 +5,4 @@
 if (Core) var core = new Core();
 
 // Mix in some lodash
-if (core && _ && $) var Components = $.extend({}, _, core);
+if (core && _ && $) var Droplets = $.extend({}, _, core);

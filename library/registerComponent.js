@@ -1,14 +1,14 @@
 (function () {
 
-    // Components.registerGlobal('components', []);
-    Components.registerGlobal('componentLookup', {});
-    Components.registerGlobal('renderQueue', []);
+    // Droplets.registerGlobal('Droplets', []);
+    Droplets.registerGlobal('componentLookup', {});
+    Droplets.registerGlobal('renderQueue', []);
 
     /**
      * REGISTER COMPONENT
      * Registers a new component
      */
-    Components.registerGlobal('registerComponent', function (obj) {
+    Droplets.registerGlobal('registerComponent', function (obj) {
 
         var scriptCount = 0;
 
@@ -17,7 +17,7 @@
          */
         // Base object for a component
         var base = {
-            componentSourceURL: null
+            DropletsourceURL: null
         };
 
         // Extend the base object with the object passed-in
@@ -27,7 +27,7 @@
         /**
          * Register our component in the lookup table
          */
-        if (obj.name) Components.componentLookup[obj.name] = obj;
+        if (obj.name) Droplets.componentLookup[obj.name] = obj;
 
 
         // Load Scripts
@@ -42,7 +42,7 @@
         // Load Stylesheets
         if (obj.stylesheets) {
             for (var j = 0; j < obj.stylesheets.length; j++)
-                Components.loadStylesheet(obj.stylesheets[j]);
+                Droplets.loadStylesheet(obj.stylesheets[j]);
         }
 
         /**
@@ -50,7 +50,7 @@
          */
         var s = setInterval(function () {
             if (!scriptCount) {
-                if (obj.name) Components.renderQueue.push(obj.name);
+                if (obj.name) Droplets.renderQueue.push(obj.name);
                 clearInterval(s);
             }
         }, 100);

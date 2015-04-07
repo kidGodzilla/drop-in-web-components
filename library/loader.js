@@ -34,7 +34,7 @@
 
         // Core
         if (!window.Core) loadScript("library/core.js");
-        if (!window.Components) loadScript("library/init.js");
+        if (!window.Droplets) loadScript("library/init.js");
         loadScript("library/utils.js");
 
         // Components Library

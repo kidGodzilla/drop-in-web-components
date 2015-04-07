@@ -3,7 +3,7 @@
     /**
      * Load an external stylesheet
      */
-    Components.registerGlobal('loadStylesheet', function (resource) {
+    Droplets.registerGlobal('loadStylesheet', function (resource) {
         var head  = document.getElementsByTagName('head')[0];
         var link  = document.createElement('link');
         link.rel  = 'stylesheet';
@@ -17,14 +17,14 @@
     /**
      * Find highest data-id-offset
      */
-    Components.registerGlobal('findDataIDOffset', function (callback) {
+    Droplets.registerGlobal('findDataIDOffset', function (callback) {
         var total = 0;
         for (var i = 0; i < 1000; i++) {
             if ($('#component-'+i).length === 0)
                 total++;
 
             if (total === 5) {
-                Components.set('idOffset', i);
+                Droplets.set('idOffset', i);
                 $('body').attr('data-id-offset', i);
                 callback(i);
                 return true;
@@ -34,9 +34,9 @@
 
 
     /**
-     * Ensure all elements have Ids (Otherwise we couldn't shadowDOM)
+     * Ensure all elements have Ids
      */
-    Components.registerGlobal('assignIDsToElements', function (offset) {
+    Droplets.registerGlobal('assignIDsToElements', function (offset) {
         var i = $('body').attr('data-id-offset') || 0;
         $('body *').each(function () {
             if (!$(this).attr('id') || $(this).attr('id') === "") {
@@ -50,20 +50,20 @@
     /**
      * Handle includes
      */
-    Components.registerGlobal('HTMLIncludes', function () {
+    Droplets.registerGlobal('HTMLIncludes', function () {
         $(document).ready(function () {
             $('[data-source-url]').each(function () {
                 var sourceURL = $(this).attr('data-source-url');
 
                 $(this).load(sourceURL, function () {
                     // Ensure all new elements have IDs
-                    Components.assignIDsToElements();
+                    Droplets.assignIDsToElements();
                 });
             });
         });
     });
 
-    Components.registerGlobal('onCondition', function (condition, callback) {
+    Droplets.registerGlobal('onCondition', function (condition, callback) {
         var s = setInterval(function () {
 
             // Early return if our condition is not a function
