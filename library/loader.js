@@ -24,6 +24,7 @@
     if (!window.asyncLoaderComplete) {
 
         // Core
+        loadStylesheet("/drop-in-web-components/library/style.css");
         loadStylesheet("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css");
 
         // JavaScript Dependencies

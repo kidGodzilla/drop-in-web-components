@@ -32,6 +32,8 @@
             var $this = $(this);
             var elID = $this.attr('id');
 
+            $this.addClass('droplet-loading');
+
             if (elID) Droplets.innerHTML[elID] = $this.html();
         });
 
@@ -54,6 +56,7 @@
 
                     if (obj && obj.beforeRender && typeof(obj.beforeRender) === "function") obj.beforeRender(elID);
                     if (obj && obj.afterRender && typeof(obj.afterRender) === "function") obj.afterRender(elID);
+                    $(this).removeClass('droplet-loading');
                 });
             }
         }, 100);
