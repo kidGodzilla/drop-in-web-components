@@ -20,7 +20,7 @@
      */
     Droplets.registerGlobal('getInnerHTML', function (elID) {
         var innerHTML = Droplets.innerHTML[elID] || "";
-        return trim(innerHTML);
+        return innerHTML.trim();
     });
 
 
