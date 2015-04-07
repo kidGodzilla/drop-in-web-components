@@ -1,11 +1,11 @@
-<div class="picasa-gallery-component"></div>
+<div class="owl-carousel-basic-slider-component"></div>
 <script>
     Droplets.registerComponent({
         name: "picasa-gallery",
         afterRender: function (componentID) {
             $(document).ready(function () {
                 var userID = $("#" + componentID).attr('data-user-id');
-                $("#" + componentID + " .picasa-gallery-component").nanoGallery({
+                $("#" + componentID + " .owl-carousel-basic-slider-component").nanoGallery({
                     kind: 'picasa',
                     userID: userID
                 });
