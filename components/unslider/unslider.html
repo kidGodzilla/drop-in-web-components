@@ -1,0 +1,23 @@
+<div class="unslider-component">
+    <ul></ul>
+</div>
+<script>
+    Droplets.registerComponent({
+        name: "unslider-component",
+        afterRender: function (componentID) {
+            $(document).ready(function () {
+                /**
+                 * Retrieve cached innerHTML for this component
+                 */
+                var innerHTML = Droplets.getInnerHTML(componentID);
+                $("#" + componentID + " .unslider-component ul").html(innerHTML);
+
+                /**
+                 * Load Unslider on this component
+                 */
+                $("#" + componentID + " .unslider-component").unslider();
+            });
+        },
+        scripts: ['http://unslider.com/unslider.min.js']
+    });
+</script>
