@@ -1,10 +1,22 @@
-<div class="owl-carousel-basic-slider-component"></div>
+<div class="owl-carousel-basic-slider-component owl-carousel owl-theme"></div>
+<style>
+    .owl-carousel-basic-slider-component.owl-carousel .item img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+</style>
 <script>
     Droplets.registerComponent({
         name: "owl-carousel-basic-slider",
         afterRender: function (componentID) {
             $(document).ready(function () {
-                $("#" + componentID + " .owl-carousel-basic-slider-component")
+                $("#" + componentID + " .owl-carousel-basic-slider-component").owlCarousel({
+                    navigation : true,
+                    slideSpeed : 300,
+                    paginationSpeed : 400,
+                    singleItem: true
+                });
             });
         },
         scripts: ['http://kidgodzilla.github.io/drop-in-web-components/components/owl-carousel-basic/js/owl.carousel.min.js'],
