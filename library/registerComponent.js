@@ -31,7 +31,7 @@
 
 
         // Load Scripts
-        if (obj.scripts) {
+        if (obj.scripts && obj.scripts.length) {
             scriptCount = obj.scripts.length;
             for (var i = 0; i < obj.scripts.length; i++)
                 $.getScript(obj.scripts[i], function () {
@@ -40,7 +40,7 @@
         }
 
         // Load Stylesheets
-        if (obj.stylesheets) {
+        if (obj.stylesheets && obj.stylesheets.length) {
             for (var j = 0; j < obj.stylesheets.length; j++)
                 Droplets.loadStylesheet(obj.stylesheets[j]);
         }
