@@ -10,7 +10,6 @@
                  * Retrieve cached innerHTML for this component
                  */
                 var innerHTML = Droplets.getInnerHTML(componentID);
-                console.log(innerHTML)
                 $("#" + componentID + " .unslider-component ul").html(innerHTML);
 
                 /**
@@ -19,6 +18,7 @@
                 $("#" + componentID + " .unslider-component").unslider();
             });
         },
+        styles: null,
         scripts: ['http://unslider.com/unslider.min.js']
     });
 </script>
