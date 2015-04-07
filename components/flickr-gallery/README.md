@@ -18,4 +18,4 @@ See https://www.flickr.com/help/forum/en-us/72157645448832933/
 
 ## Demo
 
-http://wpages.co/components/flickr-gallery/demo.html
+http://kidgodzilla.github.io/drop-in-web-components/components/flickr-gallery/

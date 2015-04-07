@@ -7,15 +7,32 @@
      */
     Droplets.assignIDsToElements();
 
+
     /**
      * Remember the insides
      */
     Droplets.registerGlobal('innerHTML', {});
 
+
+    /**
+     * Gets the cached innerHTML for a specific component, by ID
+     * This is useful inside a component since it only has a component reference
+     */
+    Droplets.registerGlobal('getInnerHTML', function (elID) {
+        var innerHTML = Droplets.innerHTML[elID] || "";
+        return innerHTML.trim();
+    });
+
+
+    /**
+     * Prepare components
+     */
     $(document).ready(function () {
         $('[data-component-name]').each(function () {
             var $this = $(this);
             var elID = $this.attr('id');
+
+            $this.addClass('droplet-loading');
 
             if (elID) Droplets.innerHTML[elID] = $this.html();
         });
@@ -24,10 +41,11 @@
         Droplets.HTMLIncludes();
     });
 
+
     $(document).ready(function () {
 
         /**
-         * Run component scripts
+         * Run component scripts as they are loaded asynchronously
          */
         setInterval(function () {
             while (Droplets.renderQueue.length) {
@@ -38,12 +56,12 @@
 
                     if (obj && obj.beforeRender && typeof(obj.beforeRender) === "function") obj.beforeRender(elID);
                     if (obj && obj.afterRender && typeof(obj.afterRender) === "function") obj.afterRender(elID);
+                    $(this).removeClass('droplet-loading');
+                    $(this).addClass('droplet-ready');
                 });
             }
         }, 100);
 
     });
-
-
 
 })();

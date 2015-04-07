@@ -1,0 +1,34 @@
+<div class="owl-carousel-basic-slider-component owl-carousel owl-theme"></div>
+<style>
+    .owl-carousel-basic-slider-component.owl-carousel .item img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+</style>
+<script>
+    Droplets.registerComponent({
+        name: "owl-carousel-basic-slider",
+        afterRender: function (componentID) {
+            $(document).ready(function () {
+                /**
+                 * Retrieve cached innerHTML for this component
+                 */
+                var innerHTML = Droplets.getInnerHTML(componentID);
+                $("#" + componentID + " .owl-carousel-basic-slider-component").html(innerHTML);
+
+                /**
+                 * Load Owl Carousel on this component
+                 */
+                $("#" + componentID + " .owl-carousel-basic-slider-component").owlCarousel({
+                    navigation : true,
+                    slideSpeed : 300,
+                    paginationSpeed : 400,
+                    singleItem: true
+                });
+            });
+        },
+        scripts: ['http://kidgodzilla.github.io/drop-in-web-components/components/owl-carousel-basic/js/owl.carousel.min.js'],
+        stylesheets: ['http://kidgodzilla.github.io/drop-in-web-components/components/owl-carousel-basic/css/owl.carousel.css', 'http://kidgodzilla.github.io/drop-in-web-components/components/owl-carousel-basic/css/owl.theme.css']
+    });
+</script>

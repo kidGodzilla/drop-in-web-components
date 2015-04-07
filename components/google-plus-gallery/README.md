@@ -19,4 +19,4 @@ Google+: display a photo album in Google+, your user ID is in the URL
 
 ## Demo
 
-http://wpages.co/components/google-plus-gallery/demo.html
+http://kidgodzilla.github.io/drop-in-web-components/components/google-plus-gallery/

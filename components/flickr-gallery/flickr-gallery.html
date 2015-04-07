@@ -1,12 +1,12 @@
-<div class="google-plus-gallery-component"></div>
+<div class="flickr-gallery-component"></div>
 <script>
     Droplets.registerComponent({
-        name: "google-plus-gallery",
+        name: "flickr-gallery",
         afterRender: function (componentID) {
             $(document).ready(function () {
                 var userID = $("#" + componentID).attr('data-user-id');
-                $("#" + componentID + " .google-plus-gallery-component").nanoGallery({
-                    kind: 'picasa',
+                $("#" + componentID + " .flickr-gallery-component").nanoGallery({
+                    kind: 'flickr',
                     userID: userID
                 });
             });
