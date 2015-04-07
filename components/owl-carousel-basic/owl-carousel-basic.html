@@ -1,0 +1,17 @@
+<div class="picasa-gallery-component"></div>
+<script>
+    Droplets.registerComponent({
+        name: "picasa-gallery",
+        afterRender: function (componentID) {
+            $(document).ready(function () {
+                var userID = $("#" + componentID).attr('data-user-id');
+                $("#" + componentID + " .picasa-gallery-component").nanoGallery({
+                    kind: 'picasa',
+                    userID: userID
+                });
+            });
+        },
+        scripts: ['https://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.5.4/jquery.nanogallery.min.js'],
+        stylesheets: ['https://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.5.4/css/nanogallery.min.css']
+    });
+</script>
