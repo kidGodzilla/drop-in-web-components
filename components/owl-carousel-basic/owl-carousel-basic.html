@@ -11,6 +11,15 @@
         name: "owl-carousel-basic-slider",
         afterRender: function (componentID) {
             $(document).ready(function () {
+                /**
+                 * Retrieve cached innerHTML for this component
+                 */
+                var innerHTML = Droplets.getInnerHTML(componentID);
+                $("#" + componentID + " .owl-carousel-basic-slider-component").html(innerHTML);
+
+                /**
+                 * Load Owl Carousel on this component
+                 */
                 $("#" + componentID + " .owl-carousel-basic-slider-component").owlCarousel({
                     navigation : true,
                     slideSpeed : 300,

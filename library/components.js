@@ -7,11 +7,25 @@
      */
     Droplets.assignIDsToElements();
 
+
     /**
      * Remember the insides
      */
     Droplets.registerGlobal('innerHTML', {});
 
+
+    /**
+     * Gets the cached innerHTML for a specific component, by ID
+     * This is useful inside a component since it only has a component reference
+     */
+    Droplets.registerGlobal('getInnerHTML', function (elID) {
+        return Droplets.innerHTML[elID] || "";
+    });
+
+
+    /**
+     * Prepare components
+     */
     $(document).ready(function () {
         $('[data-component-name]').each(function () {
             var $this = $(this);
@@ -24,10 +38,11 @@
         Droplets.HTMLIncludes();
     });
 
+
     $(document).ready(function () {
 
         /**
-         * Run component scripts
+         * Run component scripts as they are loaded asynchronously
          */
         setInterval(function () {
             while (Droplets.renderQueue.length) {
@@ -43,7 +58,5 @@
         }, 100);
 
     });
-
-
 
 })();
