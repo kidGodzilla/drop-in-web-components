@@ -20,4 +20,4 @@ Copy the following component to your website. Make sure you replace the `user-id
 
 ## Demo
 
-http://wpages.co/components/picasa-gallery/demo.html
+http://kidgodzilla.github.io/drop-in-web-components/components/picasa-gallery/
