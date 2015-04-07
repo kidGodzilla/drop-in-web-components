@@ -57,6 +57,7 @@
                     if (obj && obj.beforeRender && typeof(obj.beforeRender) === "function") obj.beforeRender(elID);
                     if (obj && obj.afterRender && typeof(obj.afterRender) === "function") obj.afterRender(elID);
                     $(this).removeClass('droplet-loading');
+                    $(this).addClass('droplet-ready');
                 });
             }
         }, 100);
