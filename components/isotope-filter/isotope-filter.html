@@ -36,8 +36,8 @@
         $('.button-group').each(function(i, buttonGroup) {
           var $buttonGroup = $(buttonGroup);
           $buttonGroup.on( 'click', 'button', function () {
-            $buttonGroup.find('.is-checked, .active').removeClass('is-checked, active');
-            $(this).addClass('is-checked, active');
+            $buttonGroup.find('.is-checked, .active').removeClass('is-checked active');
+            $(this).addClass('is-checked active');
           });
         });
 
