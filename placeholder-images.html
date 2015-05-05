@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Drop-in Web Components: Sliders</title>
+    <title>Drop-in Web Components: Placeholder Images</title>
     <link rel="stylesheet" href="/drop-in-web-components/css/bootstrap.css" media="screen">
     <link rel="stylesheet" href="/drop-in-web-components/css/bootswatch.min.css">
     <style>
@@ -42,22 +42,19 @@
                 <span class="pull-right">
                     <a href="#" class="btn btn-success"><i class="fa fa-plus"></i> &nbsp;New Component</a>
                 </span>
-                <h1 class="">Slider Components</h1>
+                <h1 class="">Placeholder Image Components</h1>
                 <br/>
 
                 <div class="well">
                     <div class="list-group">
-                        <a class="list-group-item" href="components/owl-carousel-basic" target="_new">
-                            <span class="badge">19 Installs</span>
-                            <i class="fa fa-picture-o"></i> Owl Carousel - Basic Slider
+                        <a class="list-group-item" href="components/fill-murray" target="_new">
+                            <span class="badge">37 Installs</span>
+                            <i class="fa fa-picture-o"></i> Fill Murray
                         </a>
-                        <a class="list-group-item" href="components/owl-carousel-autoplay" target="_new">
-                            <span class="badge">12 Installs</span>
-                            <i class="fa fa-picture-o"></i> Owl Carousel - Image Slider with Autoplay
+                        <a class="list-group-item" href="components/place-kitten" target="_new">
+                            <span class="badge">99 Installs</span>
+                            <i class="fa fa-picture-o"></i> Placeholder Kitten
                         </a>
-                        <a class="list-group-item" href="components/unslider" target="_new">
-                            <span class="badge">0 Installs</span>
-                            <i class="fa fa-picture-o"></i> Unslider - Simple jQuery Slider <i>In Progress</i>
                         </a>
                     </div>
                 </div>
@@ -81,9 +78,9 @@
 <script>
     $(document).ready(function () {
         Droplets.onCondition(function () {
-            return $('.sliders').length;
+            return $('.placeholder-images').length;
         }, function () {
-            $('.sliders').addClass('active');
+            $('.placeholder-images').addClass('active');
         });
     });
 </script>
