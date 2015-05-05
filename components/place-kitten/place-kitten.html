@@ -14,16 +14,16 @@
                  * Get & nice variables, set defaults, etc.
                  */
                 var width = $("#" + componentID).attr('data-width') || 200;
-                var height = $("#" + componentID).attr('data-height') || 200;
+                var height = $("#" + componentID).attr('data-height') || 300;
                 if (width) width = parseInt(width);
                 if (height) height = parseInt(height);
                 if (typeof(width) !== "number") width = 200;
-                if (typeof(height) !== "number") height = 200;
+                if (typeof(height) !== "number") height = 300;
 
                 /**
                  * Load Placeholder Kittens on this component
                  */
-                $("#" + componentID + " .place-kitten-component").append('<img src="http://placekitten.com/' + width + '/' + height + '/">');
+                $("#" + componentID + " .place-kitten-component").append('<img src="http://placekitten.com/g/' + width + '/' + height + '/">');
             });
         }
     });
