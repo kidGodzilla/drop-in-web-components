@@ -28,10 +28,10 @@ This component provides a simple, reusable slider for your website with autoplay
 
 # Image Placeholders
 
-## <a href="place-kitten#place-kitten-component">Placekitten Image Placeholder</a>
+## <a href="place-kitten">Placekitten Image Placeholder</a>
 
 Loads an image of a kitten of a user-defined width & height from placekitten.com
 
-## <a href="fill-murray#fill-murray-component">Fill Murray Image Placeholder</a>
+## <a href="fill-murray">Fill Murray Image Placeholder</a>
 
 Loads an image of Bill Murray (of a user-defined width & height) from fillmurray.com
