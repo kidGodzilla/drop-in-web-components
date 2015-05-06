@@ -24,24 +24,6 @@
     });
 
 
-    /**
-     * Prepare components
-     */
-    $(document).ready(function () {
-        $('[data-component-name]').each(function () {
-            var $this = $(this);
-            var elID = $this.attr('id');
-
-            $this.addClass('droplet-loading');
-
-            if (elID) Droplets.innerHTML[elID] = $this.html();
-        });
-
-        // Load HTML Includes
-        Droplets.HTMLIncludes();
-    });
-
-
     $(document).ready(function () {
 
         /**
@@ -49,6 +31,25 @@
          */
         Droplets.resolveDroplets();
 
+
+        /**
+         * Prepare components
+         */
+        $(document).ready(function () {
+            $('[data-component-name]').each(function () {
+                var $this = $(this);
+                var elID = $this.attr('id');
+
+                $this.addClass('droplet-loading');
+
+                if (elID) Droplets.innerHTML[elID] = $this.html();
+            });
+
+            // Load HTML Includes
+            Droplets.HTMLIncludes();
+        });
+
+        
         /**
          * Run component scripts as they are loaded asynchronously
          */
