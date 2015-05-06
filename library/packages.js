@@ -16,7 +16,7 @@
         $('.droplet').each(function () {
             var $this = $(this);
             var dropletName = $this.prop('tagName').toLowerCase().trim();
-            
+
             if (!$this.attr('data-component-name'))
                 $this.attr('data-component-name', dropletName);
 
