@@ -43,7 +43,7 @@
 
 
     $(document).ready(function () {
-        
+
         /**
          * Assign [data-source-url] attribute for components using CDN syntax
          */
