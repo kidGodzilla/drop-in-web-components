@@ -7,11 +7,6 @@
      */
     Droplets.assignIDsToElements();
 
-    /**
-     * Assign [data-source-url] attribute for components using CDN syntax
-     */
-    Droplets.resolveDroplets();
-
 
     /**
      * Remember the insides
@@ -48,6 +43,11 @@
 
 
     $(document).ready(function () {
+        
+        /**
+         * Assign [data-source-url] attribute for components using CDN syntax
+         */
+        Droplets.resolveDroplets();
 
         /**
          * Run component scripts as they are loaded asynchronously
