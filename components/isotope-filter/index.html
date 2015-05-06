@@ -17,8 +17,7 @@
             padding: 15px;
         }
 
-        /* Isotope Styles */
-
+        /* ----- Isotope Styles ----- */
 
         /* ---- button ---- */
 
@@ -149,12 +148,11 @@
         .element-item.diatomic        { background: #00F; background: hsl( 252, 100%, 50%); }
         .element-item.halogen         { background: #F0F; background: hsl( 288, 100%, 50%); }
         .element-item.noble-gas       { background: #F08; background: hsl( 324, 100%, 50%); }
-
     </style>
 </head>
 <body>
 <h1>Isotope: Basic Filtering</h1>
-<div id="DemoComponent" data-component-name="isotope-filter" data-source-url="isotope-filter.html">
+<component id="DemoComponent" data-component-name="isotope-filter" data-source-url="isotope-filter.html">
     <div id="filters" class="button-group">
         <button class="button is-checked" data-filter="*">show all</button>
         <button class="button" data-filter=".metal">metal</button>
@@ -273,6 +271,6 @@
             <p class="weight">(244)</p>
         </div>
     </div>
-</div>
+</component>
 </body>
 </html>
