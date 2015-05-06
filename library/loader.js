@@ -36,6 +36,7 @@
         if (!window.Core) loadScript("/drop-in-web-components/library/core.js");
         if (!window.Droplets) loadScript("/drop-in-web-components/library/init.js");
         loadScript("/drop-in-web-components/library/utils.js");
+        loadScript("/drop-in-web-components/library/packages.js");
 
         // Components Library
         loadScript("/drop-in-web-components/library/registerComponent.js");

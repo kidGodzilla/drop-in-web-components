@@ -81,4 +81,11 @@
         }, 100);
     });
 
+    /**
+     * Return protocol for the current page, replacing file: with http:
+     */
+    Droplets.registerGlobal('protocol', function () {
+        return window.location.protocol === "file:" ? "http:" : window.location.protocol;
+    });
+
 })();

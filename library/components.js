@@ -7,6 +7,11 @@
      */
     Droplets.assignIDsToElements();
 
+    /**
+     * Assign [data-source-url] attribute for components using CDN syntax
+     */
+    Droplets.resolveDroplets();
+
 
     /**
      * Remember the insides
