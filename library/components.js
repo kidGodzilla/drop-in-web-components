@@ -49,7 +49,7 @@
             Droplets.HTMLIncludes();
         });
 
-        
+
         /**
          * Run component scripts as they are loaded asynchronously
          */
