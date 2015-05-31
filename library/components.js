@@ -86,6 +86,7 @@
 
                     if (obj && obj.beforeRender && typeof(obj.beforeRender) === "function") obj.beforeRender(elID);
                     if (obj && obj.render && typeof(obj.render) === "function") Droplets.executeRender(elID, obj.render);
+                    if (obj && obj.afterRender && typeof(obj.afterRender) === "function") obj.afterRender(elID);
                 });
             }
         }, 100);
