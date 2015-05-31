@@ -23,26 +23,34 @@
         return innerHTML.trim();
     });
 
+    /**
+     * executeAfterRender is responsible for instanciating a new droplet based on
+     * the droplet constructor, Executing an afterRender callback script, and
+     * cleaning up the instanciator.
+     */
     Droplets.registerGlobal('executeAfterRender', function (componentID, callback) {
         $(document).ready(function () {
 
+            // Not sure if the classnames are needed
+            var classnames = $('#' + componentID).attr('class');
             $('#' + componentID).attr('id', componentID + '-instantiator');
-
-            $('<div id="' + componentID + '" class="fill-murray-component demo-component"></div>').insertAfter($('#' + componentID + '-instantiator'));
+            $('<div id="' + componentID + '" class="' + classnames + '"></div>').insertAfter($('#' + componentID + '-instantiator'));
 
             var $component = $('#' + componentID);
-
             var attributes = $('#' + componentID + '-instantiator').prop("attributes");
 
+            // Attributes must be passed to the new droplet instance from the instanciator
             $.each(attributes, function() {
                 if (this.name !== 'class' && this.name !== 'classnames' && this.name !== 'name' && this.name !== 'src' && this.name !== 'id')
                     $component.attr(this.name, this.value);
             });
-
+            // Classnames must be passed to the new droplet instance from the instanciator
             $component.attr('class', $component.attr('class') + " " + $('#' + componentID + '-instantiator').attr('classnames'));
 
+            // Remove the instanciator (cleanup)
             $('#' + componentID + '-instantiator').remove();
 
+            // Execute the callback function (afterRender method)
             if (callback && typeof(callback === "function")) callback(componentID);
 
         });
