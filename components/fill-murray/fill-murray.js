@@ -41,7 +41,8 @@
                                 $component.attr(this.name, this.value);
                         });
 
-                        $component.attr('class', $('#' + componentID + '-instantiator').attr('class'));
+                        // $component.attr('class', $('#' + componentID + '-instantiator').attr('class'));
+                        console.log($('#' + componentID + '-instantiator').attr('class'))
 
                         $('#' + componentID + '-instantiator').remove();
 
