@@ -31,11 +31,11 @@
 
                         // loop through <select> attributes and apply them on <div>
                         $.each(attributes, function() {
-                            if (this.name !== 'class' && this.name !== 'data-component-name'&& this.name !== 'src')
+                            if (this.name !== 'class' && this.name !== 'data-component-name' && this.name !== 'src' && this.name !== 'id')
                                 $component.attr(this.name, this.value);
                         });
 
-                        // $('#' + componentID + '-instantiator').remove();
+                        $('#' + componentID + '-instantiator').remove();
 
                         /**
                          * Retrieve cached innerHTML for this component
