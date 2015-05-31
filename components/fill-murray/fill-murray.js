@@ -37,4 +37,4 @@ var interval = setInterval(function () {
             }
         });
     }
-}, 250);
+}, 100);
