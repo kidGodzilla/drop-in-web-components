@@ -33,16 +33,16 @@
         loadScript("//www.bittitan.com/internal-bootstrap/bootstrap.min.js");
 
         // Core
-        if (!window.Core) loadScript("/drop-in-web-components/library/core.js");
-        if (!window.Droplets) loadScript("/drop-in-web-components/library/init.js");
-        loadScript("/drop-in-web-components/library/utils.js");
-        loadScript("/drop-in-web-components/library/packages.js");
+        if (!window.Core) loadScript("http://kidgodzilla.github.io/drop-in-web-components/library/core.js");
+        if (!window.Droplets) loadScript("http://kidgodzilla.github.io/drop-in-web-components/library/init.js");
+        loadScript("http://kidgodzilla.github.io/drop-in-web-components/library/utils.js");
+        loadScript("http://kidgodzilla.github.io/drop-in-web-components/library/packages.js");
 
         // Components Library
-        loadScript("/drop-in-web-components/library/registerComponent.js");
+        loadScript("http://kidgodzilla.github.io/drop-in-web-components/library/registerComponent.js");
 
         // Script Runner
-        loadScript("/drop-in-web-components/library/components.js");
+        loadScript("http://kidgodzilla.github.io/drop-in-web-components/library/components.js");
 
         window.asyncLoaderComplete = true;
     }
