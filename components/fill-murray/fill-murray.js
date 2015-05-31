@@ -21,9 +21,11 @@
 
                     $(document).ready(function () {
 
-                        $('#' + componentID).remove();
+                        $('#' + componentID).attr('id', componentID + '-instantiator');
 
-                        $('<div id="' + componentID + '" class="fill-murray-component demo-component"></div>').insertAfter($('#' + componentID));
+                        $('<div id="' + componentID + '" class="fill-murray-component demo-component"></div>').insertAfter($('#' + componentID + '-instantiator'));
+
+                        $('#' + componentID + '-instantiator').remove();
 
                         $component = $('#' + componentID);
 
