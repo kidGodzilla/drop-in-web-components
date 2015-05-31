@@ -36,7 +36,7 @@
          * Prepare components
          */
         $(document).ready(function () {
-            $('[droplet]').each(function () {
+            $('[data-component-name]').each(function () {
                 var $this = $(this);
                 var elID = $this.attr('id');
 
