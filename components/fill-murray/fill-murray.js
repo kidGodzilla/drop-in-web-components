@@ -17,6 +17,8 @@
                 name: "fill-murray",
                 afterRender: function (componentID) {
 
+                    console.log("Running afterRender hook for " + componentID);
+
                     $(document).ready(function () {
 
                         $('<div class="fill-murray-component demo-component"></div>').insertAfter($('#' + componentID));
