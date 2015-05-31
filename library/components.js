@@ -33,20 +33,20 @@
 
             // Instanciates a new droplet and transitions it to the ready state
             $('#' + componentID).attr('id', componentID + '-instantiator');
-            $('<div id="' + componentID + '" class="droplet-ready"></div>').insertAfter($('#' + componentID + '-instantiator'));
+            $('<div id="' + componentID + '"></div>').insertAfter($('#' + componentID + '-instantiator'));
 
             var $component = $('#' + componentID);
             var attributes = $('#' + componentID + '-instantiator').prop("attributes");
 
             // Attributes must be passed to the new droplet instance from the instanciator
             $.each(attributes, function() {
-                if (this.name !== 'class' && this.name !== 'classnames' && this.name !== 'name' && this.name !== 'src' && this.name !== 'id')
+                if (this.name !== 'name' && this.name !== 'src' && this.name !== 'id')
                     $component.attr(this.name, this.value);
             });
 
-            // Classnames must be passed to the new droplet instance from the instanciator
-            if ($('#' + componentID + '-instantiator').attr('classnames'))
-                $component.attr('class', $component.attr('class') + " " + $('#' + componentID + '-instantiator').attr('classnames'));
+            //// Classnames must be passed to the new droplet instance from the instanciator
+            //if ($('#' + componentID + '-instantiator').attr('classnames'))
+            //    $component.attr('class', $component.attr('class') + " " + $('#' + componentID + '-instantiator').attr('classnames'));
 
             // Remove the instanciator (cleanup)
             $('#' + componentID + '-instantiator').remove();
@@ -73,7 +73,7 @@
                 var $this = $(this);
                 var elID = $this.attr('id');
 
-                $this.addClass('droplet-loading');
+                //$this.addClass('droplet-loading');
 
                 if (elID) Droplets.innerHTML[elID] = $this.html();
             });
@@ -89,7 +89,7 @@
         setInterval(function () {
             while (Droplets.renderQueue.length) {
                 var name = Droplets.renderQueue.shift();
-                $('script[name=' + name + '].droplet-loading').each(function () {
+                $('script[name=' + name + ']').each(function () {
                     var elID = $(this).attr('id');
                     var obj = Droplets.componentLookup[name];
 
