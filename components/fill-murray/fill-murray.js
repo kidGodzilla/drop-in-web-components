@@ -25,11 +25,16 @@
 
                         $('<div id="' + componentID + '" class="fill-murray-component demo-component"></div>').insertAfter($('#' + componentID + '-instantiator'));
 
-                        // $('#' + componentID + '-instantiator').remove();
-
-                        console.log($('#' + componentID + '-instantiator').attributes);
-
                         $component = $('#' + componentID);
+
+                        var attributes = $('#' + componentID + '-instantiator').prop("attributes");
+
+                        // loop through <select> attributes and apply them on <div>
+                        $.each(attributes, function() {
+                            $component.attr(this.name, this.value);
+                        });
+
+                        // $('#' + componentID + '-instantiator').remove();
 
                         /**
                          * Retrieve cached innerHTML for this component
