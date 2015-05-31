@@ -49,8 +49,8 @@
          * Add the component to the render queue (eventually)
          */
         var s = setInterval(function () {
-            if (!scriptCount) {
-                if (obj.name) Droplets.renderQueue.push(obj.id);
+            if (!scriptCount && Droplets.renderQueue.indexOf(obj.name) < 0) {
+                if (obj.name) Droplets.renderQueue.push(obj.name);
                 clearInterval(s);
             }
         }, 100);
