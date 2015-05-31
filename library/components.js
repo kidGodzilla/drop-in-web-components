@@ -69,7 +69,7 @@
         /**
          * Prepare components
          */
-        (function () {
+        $(document).ready(function () {
             $('script[name][src]').each(function () {
                 var $this = $(this);
                 var elID = $this.attr('id');
@@ -80,8 +80,8 @@
             });
 
             // Load HTML Includes
-            Droplets.HTMLIncludes();
-        })();
+            // Droplets.HTMLIncludes();
+        });
 
 
         /**
