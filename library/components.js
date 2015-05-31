@@ -44,8 +44,10 @@
                 if (this.name !== 'class' && this.name !== 'classnames' && this.name !== 'name' && this.name !== 'src' && this.name !== 'id')
                     $component.attr(this.name, this.value);
             });
+            
             // Classnames must be passed to the new droplet instance from the instanciator
-            $component.attr('class', $component.attr('class') + " " + $('#' + componentID + '-instantiator').attr('classnames'));
+            if ($('#' + componentID + '-instantiator').attr('classnames'))
+                $component.attr('class', $component.attr('class') + " " + $('#' + componentID + '-instantiator').attr('classnames'));
 
             // Remove the instanciator (cleanup)
             $('#' + componentID + '-instantiator').remove();
