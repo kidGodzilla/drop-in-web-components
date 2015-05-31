@@ -31,7 +31,8 @@
 
                         // loop through <select> attributes and apply them on <div>
                         $.each(attributes, function() {
-                            $component.attr(this.name, this.value);
+                            if (this.name !== 'class' && this.name !== 'data-component-name'&& this.name !== 'src')
+                                $component.attr(this.name, this.value);
                         });
 
                         // $('#' + componentID + '-instantiator').remove();
