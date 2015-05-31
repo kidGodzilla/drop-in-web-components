@@ -49,7 +49,7 @@
          * Add the component to the render queue (eventually)
          */
         var s = setInterval(function () {
-            console.log(Droplets.renderQueue.indexOf(obj.name));
+            console.log(obj.name, Droplets.renderQueue.indexOf(obj.name));
             if (!scriptCount && obj.name && Droplets.renderQueue.indexOf(obj.name) === -1) {
                 Droplets.renderQueue.push(obj.name);
                 clearInterval(s);
