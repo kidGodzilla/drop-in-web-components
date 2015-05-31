@@ -3,7 +3,7 @@ if (!window.Droplets) document.write('<script src="http://kidgodzilla.github.io/
 var interval = setInterval(function () {
     if (window.Droplets) {
         clearInterval(interval);
-        
+
         Droplets.registerComponent({
             name: "fill-murray",
             afterRender: function (componentID) {
@@ -12,7 +12,7 @@ var interval = setInterval(function () {
 
                     $component = $('#' + componentID);
 
-                    $('<div class="fill-murray-component"></div>').insertAfter($component);
+                    $('<div class="fill-murray-component demo-component"></div>').insertAfter($component);
 
                     $component = $(".fill-murray-component");
 
