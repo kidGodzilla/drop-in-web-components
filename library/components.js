@@ -29,14 +29,11 @@
      * cleaning up the instanciator.
      */
     Droplets.registerGlobal('executeAfterRender', function (componentID, callback) {
-        console.log(componentID, callback);
         $(document).ready(function () {
 
-            // Not sure if the classnames are needed
-            var classnames = $('#' + componentID).attr('class');
-            console.log(classnames);
+            // Instanciates a new droplet and transitions it to the ready state
             $('#' + componentID).attr('id', componentID + '-instantiator');
-            $('<div id="' + componentID + '" class="' + classnames + '"></div>').insertAfter($('#' + componentID + '-instantiator'));
+            $('<div id="' + componentID + '" class="droplet-ready"></div>').insertAfter($('#' + componentID + '-instantiator'));
 
             var $component = $('#' + componentID);
             var attributes = $('#' + componentID + '-instantiator').prop("attributes");
@@ -55,7 +52,6 @@
             $('#' + componentID + '-instantiator').remove();
 
             // Execute the callback function (afterRender method)
-            console.log('call me back yo!');
             if (callback && typeof(callback === "function")) callback(componentID);
 
         });
@@ -99,8 +95,6 @@
 
                     if (obj && obj.beforeRender && typeof(obj.beforeRender) === "function") obj.beforeRender(elID);
                     if (obj && obj.afterRender && typeof(obj.afterRender) === "function") Droplets.executeAfterRender(elID, obj.afterRender);
-                    $(this).removeClass('droplet-loading');
-                    $(this).addClass('droplet-ready');
                 });
             }
         }, 100);
