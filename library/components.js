@@ -24,11 +24,11 @@
     });
 
     /**
-     * executeAfterRender is responsible for instanciating a new droplet based on
-     * the droplet constructor, Executing an afterRender callback script, and
+     * executeRender is responsible for instanciating a new droplet based on
+     * the droplet constructor, Executing a callback script, and
      * cleaning up the instanciator.
      */
-    Droplets.registerGlobal('executeAfterRender', function (componentID, callback) {
+    Droplets.registerGlobal('executeRender', function (componentID, callback) {
         $(document).ready(function () {
 
             // Instanciates a new droplet and transitions it to the ready state
@@ -43,7 +43,7 @@
                 if (this.name !== 'name' && this.name !== 'src' && this.name !== 'id')
                     $component.attr(this.name, this.value);
             });
-            
+
             // Remove the instanciator (cleanup)
             $('#' + componentID + '-instantiator').remove();
 
@@ -85,7 +85,7 @@
                     var obj = Droplets.componentLookup[name];
 
                     if (obj && obj.beforeRender && typeof(obj.beforeRender) === "function") obj.beforeRender(elID);
-                    if (obj && obj.afterRender && typeof(obj.afterRender) === "function") Droplets.executeAfterRender(elID, obj.afterRender);
+                    if (obj && obj.render && typeof(obj.render) === "function") Droplets.executeRender(elID, obj.render);
                 });
             }
         }, 100);

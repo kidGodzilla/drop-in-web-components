@@ -23,7 +23,7 @@
              */
             Droplets.registerComponent({
                 name: "fill-murray",
-                afterRender: function (componentID) {
+                render: function (componentID) {
 
                     $component = $('#' + componentID);
 
