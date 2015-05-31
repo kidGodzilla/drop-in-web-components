@@ -1,5 +1,9 @@
 # Drop-in Web Components
 
+## NOTICE
+
+In the middle of a refactor. Everything is broken except for http://kidgodzilla.github.io/drop-in-web-components/test.html, which uses the new droplet syntax.
+
 ## What are drop-in web components?
 
 Drop-in web components are simple, declarative, hosted web components that you can add to your website without writing any code.
