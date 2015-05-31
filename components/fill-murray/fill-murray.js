@@ -27,9 +27,7 @@
 
                         // $('#' + componentID + '-instantiator').remove();
 
-                        $('#' + componentID + '-instantiator').attributes.each(function () {
-                           console.log(this);
-                        });
+                        console.log($('#' + componentID + '-instantiator').attributes);
 
                         $component = $('#' + componentID);
 
