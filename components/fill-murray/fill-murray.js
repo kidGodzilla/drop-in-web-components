@@ -46,8 +46,8 @@
                         /**
                          * Get & nice variables, set defaults, etc.
                          */
-                        var width = $("#" + componentID + '-instantiator').attr('data-width') || 200;
-                        var height = $("#" + componentID + '-instantiator').attr('data-height') || 200;
+                        var width = $component.attr('data-width') || 200;
+                        var height = $component.attr('data-height') || 200;
                         if (width) width = parseInt(width);
                         if (height) height = parseInt(height);
                         if (typeof(width) !== "number") width = 200;
