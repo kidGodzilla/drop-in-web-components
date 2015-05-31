@@ -5,6 +5,8 @@
 
     if (!window.Droplets) document.write('<script src="http://kidgodzilla.github.io/drop-in-web-components/library/loader.js"></script>');
 
+    if (!window._DropletResolvers) window._DropletResolvers = {};
+
     var tmp = (0|Math.random()*9e6).toString(36);
 
     window._DropletResolvers[tmp] = setInterval(function () {
