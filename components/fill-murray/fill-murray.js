@@ -25,47 +25,29 @@
                 name: "fill-murray",
                 afterRender: function (componentID) {
 
-                    $(document).ready(function () {
+                    $component = $('#' + componentID);
 
-                        $('#' + componentID).attr('id', componentID + '-instantiator');
+                    /**
+                     * Retrieve cached innerHTML for this component
+                     */
+                    var innerHTML = Droplets.getInnerHTML(componentID);
+                    $component.html(innerHTML);
 
-                        $('<div id="' + componentID + '" class="fill-murray-component demo-component"></div>').insertAfter($('#' + componentID + '-instantiator'));
+                    /**
+                     * Get & nice variables, set defaults, etc.
+                     */
+                    var width = $component.attr('data-width') || 200;
+                    var height = $component.attr('data-height') || 200;
+                    if (width) width = parseInt(width);
+                    if (height) height = parseInt(height);
+                    if (typeof(width) !== "number") width = 200;
+                    if (typeof(height) !== "number") height = 200;
 
-                        $component = $('#' + componentID);
+                    /**
+                     * Load Bill Murray on this component
+                     */
+                    $component.append('<img src="http://www.fillmurray.com/' + width + '/' + height + '/">');
 
-                        var attributes = $('#' + componentID + '-instantiator').prop("attributes");
-
-                        // loop through <select> attributes and apply them on <div>
-                        $.each(attributes, function() {
-                            if (this.name !== 'class' && this.name !== 'classnames' && this.name !== 'name' && this.name !== 'src' && this.name !== 'id')
-                                $component.attr(this.name, this.value);
-                        });
-
-                        $component.attr('class', $component.attr('class') + " " + $('#' + componentID + '-instantiator').attr('classnames'));
-
-                        $('#' + componentID + '-instantiator').remove();
-
-                        /**
-                         * Retrieve cached innerHTML for this component
-                         */
-                        var innerHTML = Droplets.getInnerHTML(componentID);
-                        $component.html(innerHTML);
-
-                        /**
-                         * Get & nice variables, set defaults, etc.
-                         */
-                        var width = $component.attr('data-width') || 200;
-                        var height = $component.attr('data-height') || 200;
-                        if (width) width = parseInt(width);
-                        if (height) height = parseInt(height);
-                        if (typeof(width) !== "number") width = 200;
-                        if (typeof(height) !== "number") height = 200;
-
-                        /**
-                         * Load Bill Murray on this component
-                         */
-                        $component.append('<img src="http://www.fillmurray.com/' + width + '/' + height + '/">');
-                    });
                 }
             });
         }

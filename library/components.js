@@ -23,6 +23,31 @@
         return innerHTML.trim();
     });
 
+    Droplets.registerGlobal('executeAfterRender', function (elID, callback) {
+        $(document).ready(function () {
+
+            $('#' + componentID).attr('id', componentID + '-instantiator');
+
+            $('<div id="' + componentID + '" class="fill-murray-component demo-component"></div>').insertAfter($('#' + componentID + '-instantiator'));
+
+            var $component = $('#' + componentID);
+
+            var attributes = $('#' + componentID + '-instantiator').prop("attributes");
+
+            $.each(attributes, function() {
+                if (this.name !== 'class' && this.name !== 'classnames' && this.name !== 'name' && this.name !== 'src' && this.name !== 'id')
+                    $component.attr(this.name, this.value);
+            });
+
+            $component.attr('class', $component.attr('class') + " " + $('#' + componentID + '-instantiator').attr('classnames'));
+
+            $('#' + componentID + '-instantiator').remove();
+
+            if (callback && typeof(callback === "function")) callback(elID);
+
+        });
+    });
+
 
     $(document).ready(function () {
 
@@ -61,7 +86,7 @@
                     var obj = Droplets.componentLookup[name];
 
                     if (obj && obj.beforeRender && typeof(obj.beforeRender) === "function") obj.beforeRender(elID);
-                    if (obj && obj.afterRender && typeof(obj.afterRender) === "function") obj.afterRender(elID);
+                    if (obj && obj.afterRender && typeof(obj.afterRender) === "function") Droplets.executeAfterRender(elID, obj.afterRender);
                     $(this).removeClass('droplet-loading');
                     $(this).addClass('droplet-ready');
                 });
