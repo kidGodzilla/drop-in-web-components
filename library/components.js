@@ -44,7 +44,7 @@
                 if (this.name !== 'class' && this.name !== 'classnames' && this.name !== 'name' && this.name !== 'src' && this.name !== 'id')
                     $component.attr(this.name, this.value);
             });
-            
+
             // Classnames must be passed to the new droplet instance from the instanciator
             if ($('#' + componentID + '-instantiator').attr('classnames'))
                 $component.attr('class', $component.attr('class') + " " + $('#' + componentID + '-instantiator').attr('classnames'));
@@ -58,7 +58,6 @@
         });
     });
 
-
     $(document).ready(function () {
 
         /**
@@ -70,7 +69,7 @@
         /**
          * Prepare components
          */
-        $(document).ready(function () {
+        (function () {
             $('script[name][src]').each(function () {
                 var $this = $(this);
                 var elID = $this.attr('id');
@@ -82,7 +81,7 @@
 
             // Load HTML Includes
             Droplets.HTMLIncludes();
-        });
+        })();
 
 
         /**
