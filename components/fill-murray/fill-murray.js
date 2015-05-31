@@ -1,10 +1,11 @@
 if (!window.Droplets) document.write('<script src="http://kidgodzilla.github.io/drop-in-web-components/library/loader.js"></script>');
 
-Droplets.registerComponent({
-    name: "fill-murray",
-    afterRender: function (componentID) {
-        componentID = "DemoComponent"; // Test facilitation
-        $(document).ready(function () {
+$(document).ready(function () {
+    Droplets.registerComponent({
+        name: "fill-murray",
+        afterRender: function (componentID) {
+            componentID = "DemoComponent"; // Test facilitation
+
 
             $component = $('#' + componentID);
 
@@ -32,6 +33,7 @@ Droplets.registerComponent({
              * Load Bill Murray on this component
              */
             $component.append('<img src="http://www.fillmurray.com/' + width + '/' + height + '/">');
-        });
-    }
+
+        }
+    });
 });
