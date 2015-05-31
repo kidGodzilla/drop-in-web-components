@@ -6,9 +6,9 @@ Droplets.registerComponent({
 
             $component = $('#' + componentID);
 
-            $component.append('<div class="fill-murray-component"></div>');
+            $('<div class="fill-murray-component"></div>').insertAfter($component);
 
-            $component = $("#" + componentID + " .fill-murray-component");
+            $component = $(".fill-murray-component");
 
             /**
              * Retrieve cached innerHTML for this component
