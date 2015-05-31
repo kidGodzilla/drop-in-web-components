@@ -58,7 +58,6 @@
                 var name = Droplets.renderQueue.shift();
                 $('[data-component-name=' + name + '].droplet-loading').each(function () {
                     var elID = $(this).attr('id');
-                    console.log(elID);
                     var obj = Droplets.componentLookup[name];
 
                     if (obj && obj.beforeRender && typeof(obj.beforeRender) === "function") obj.beforeRender(elID);
