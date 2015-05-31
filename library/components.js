@@ -89,7 +89,7 @@
         setInterval(function () {
             while (Droplets.renderQueue.length) {
                 var name = Droplets.renderQueue.shift();
-                $('[name=' + name + '].droplet-loading').each(function () {
+                $('script[name=' + name + '].droplet-loading').each(function () {
                     var elID = $(this).attr('id');
                     var obj = Droplets.componentLookup[name];
 
