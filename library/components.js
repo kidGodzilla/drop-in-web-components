@@ -23,7 +23,7 @@
         return innerHTML.trim();
     });
 
-    Droplets.registerGlobal('executeAfterRender', function (elID, callback) {
+    Droplets.registerGlobal('executeAfterRender', function (componentID, callback) {
         $(document).ready(function () {
 
             $('#' + componentID).attr('id', componentID + '-instantiator');
@@ -43,7 +43,7 @@
 
             $('#' + componentID + '-instantiator').remove();
 
-            if (callback && typeof(callback === "function")) callback(elID);
+            if (callback && typeof(callback === "function")) callback(componentID);
 
         });
     });
