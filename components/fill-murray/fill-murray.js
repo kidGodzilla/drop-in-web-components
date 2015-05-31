@@ -22,7 +22,7 @@
                     $(document).ready(function () {
 
                         $('<div class="fill-murray-component demo-component"></div>').insertAfter($('#' + componentID));
-                        $component = $(".fill-murray-component");
+                        $component = $('#' + componentID);
 
                         /**
                          * Retrieve cached innerHTML for this component
