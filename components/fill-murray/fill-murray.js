@@ -1,7 +1,7 @@
 /**
  * FILL-MURRAY COMPONENT
  */
-console.log(document.currentScript);
+console.log(document.currentScript.id);
 (function () {
 
     /**
