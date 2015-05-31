@@ -16,7 +16,10 @@
         if (window.Droplets) {
             clearInterval(window._DropletResolvers[tmp]);
 
-            console.log( $(document.currentScript).attr('id'), document.currentScript);
+            var scripts = document.getElementsByTagName( 'script' );
+            var me = scripts[ scripts.length - 1 ];
+
+            console.log($(me).attr('id'), me);
 
             /**
              * ----------------
