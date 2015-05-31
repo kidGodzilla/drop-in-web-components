@@ -50,7 +50,7 @@
          */
         var s = setInterval(function () {
             if (!scriptCount) {
-                if (obj.name) Droplets.renderQueue.push(obj.name);
+                if (obj.name) Droplets.renderQueue.push(obj.id);
                 clearInterval(s);
             }
         }, 100);
