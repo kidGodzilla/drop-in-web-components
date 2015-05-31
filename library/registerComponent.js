@@ -51,7 +51,6 @@
         var s = setInterval(function () {
             if (!scriptCount) {
                 if (obj.name) Droplets.renderQueue.push(obj.name);
-                console.log('appending component to render queue');
                 clearInterval(s);
             }
         }, 100);

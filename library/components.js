@@ -56,6 +56,7 @@
         setInterval(function () {
             while (Droplets.renderQueue.length) {
                 var name = Droplets.renderQueue.shift();
+                console.log(name)
                 $('[data-component-name=' + name + ']').each(function () {
                     var elID = $(this).attr('id');
                     var obj = Droplets.componentLookup[name];
