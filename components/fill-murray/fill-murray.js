@@ -25,7 +25,11 @@
 
                         $('<div id="' + componentID + '" class="fill-murray-component demo-component"></div>').insertAfter($('#' + componentID + '-instantiator'));
 
-                        $('#' + componentID + '-instantiator').remove();
+                        // $('#' + componentID + '-instantiator').remove();
+
+                        $('#' + componentID + '-instantiator').attributes.each(function () {
+                           console.log(this);
+                        });
 
                         $component = $('#' + componentID);
 
@@ -38,8 +42,8 @@
                         /**
                          * Get & nice variables, set defaults, etc.
                          */
-                        var width = $("#" + componentID).attr('data-width') || 200;
-                        var height = $("#" + componentID).attr('data-height') || 200;
+                        var width = $("#" + componentID + '-instantiator').attr('data-width') || 200;
+                        var height = $("#" + componentID + '-instantiator').attr('data-height') || 200;
                         if (width) width = parseInt(width);
                         if (height) height = parseInt(height);
                         if (typeof(width) !== "number") width = 200;
