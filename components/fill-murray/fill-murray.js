@@ -16,6 +16,8 @@
         if (window.Droplets) {
             clearInterval(window._DropletResolvers[tmp]);
 
+            console.log( $(document.currentScript).attr('id'), document.currentScript);
+
             /**
              * ----------------
              * END BOILERPLATE |
