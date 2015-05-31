@@ -7,7 +7,9 @@ var interval = setInterval(function () {
         Droplets.registerComponent({
             name: "fill-murray",
             afterRender: function (componentID) {
-                componentID = "DemoComponent"; // Test facilitation
+                // componentID = "DemoComponent"; // Test facilitation
+                console.log(componentID);
+                
                 $(document).ready(function () {
 
                     $component = $('#' + componentID);
