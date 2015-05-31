@@ -1,4 +1,4 @@
-if (!Droplets) document.write('<script src="http://kidgodzilla.github.io/drop-in-web-components/library/loader.js"></script>');
+if (!window.Droplets) document.write('<script src="http://kidgodzilla.github.io/drop-in-web-components/library/loader.js"></script>');
 
 Droplets.registerComponent({
     name: "fill-murray",
