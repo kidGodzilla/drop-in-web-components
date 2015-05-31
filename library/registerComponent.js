@@ -48,16 +48,12 @@
         /**
          * Add the component to the render queue (eventually)
          */
-
-        var interval = Math.floor(Math.random() * 100);
-
         var s = setInterval(function () {
-            console.log(obj.name, Droplets.renderQueue.indexOf(obj.name), Droplets.renderQueue);
-            if (!scriptCount && obj.name && Droplets.renderQueue.indexOf(obj.name) === -1) {
-                Droplets.renderQueue.push(obj.name);
+            if (!scriptCount) {
+                if (obj.name) Droplets.renderQueue.push(obj.name);
                 clearInterval(s);
             }
-        }, interval);
+        }, 100);
 
     });
 })();
