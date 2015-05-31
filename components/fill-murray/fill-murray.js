@@ -21,7 +21,10 @@
 
                     $(document).ready(function () {
 
-                        $('<div class="fill-murray-component demo-component"></div>').insertAfter($('#' + componentID));
+                        $('#' + componentID).remove();
+
+                        $('<div id="' + componentID + '" class="fill-murray-component demo-component"></div>').insertAfter($('#' + componentID));
+
                         $component = $('#' + componentID);
 
                         /**
