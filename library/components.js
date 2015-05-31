@@ -43,11 +43,7 @@
                 if (this.name !== 'name' && this.name !== 'src' && this.name !== 'id')
                     $component.attr(this.name, this.value);
             });
-
-            //// Classnames must be passed to the new droplet instance from the instanciator
-            //if ($('#' + componentID + '-instantiator').attr('classnames'))
-            //    $component.attr('class', $component.attr('class') + " " + $('#' + componentID + '-instantiator').attr('classnames'));
-
+            
             // Remove the instanciator (cleanup)
             $('#' + componentID + '-instantiator').remove();
 
@@ -73,13 +69,8 @@
                 var $this = $(this);
                 var elID = $this.attr('id');
 
-                //$this.addClass('droplet-loading');
-
                 if (elID) Droplets.innerHTML[elID] = $this.html();
             });
-
-            // Load HTML Includes
-            // Droplets.HTMLIncludes();
         });
 
 

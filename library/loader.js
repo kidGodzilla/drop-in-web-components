@@ -24,7 +24,6 @@
     if (!window.asyncLoaderComplete) {
 
         // Core
-        loadStylesheet("http://kidgodzilla.github.io//drop-in-web-components/library/style.css");
         loadStylesheet("http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css");
 
         // JavaScript Dependencies
