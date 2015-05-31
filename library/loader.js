@@ -24,12 +24,12 @@
     if (!window.asyncLoaderComplete) {
 
         // Core
-        loadStylesheet("/drop-in-web-components/library/style.css");
-        loadStylesheet("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css");
+        loadStylesheet("http://kidgodzilla.github.io//drop-in-web-components/library/style.css");
+        loadStylesheet("http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css");
 
         // JavaScript Dependencies
-        if (!window.$) loadScript("//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js");
-        if (!window._) loadScript("//cdn.jsdelivr.net/lodash/3.5.0/lodash.compat.min.js");
+        if (!window.$) loadScript("http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js");
+        if (!window._) loadScript("http://cdn.jsdelivr.net/lodash/3.5.0/lodash.compat.min.js");
         loadScript("//www.bittitan.com/internal-bootstrap/bootstrap.min.js");
 
         // Core
