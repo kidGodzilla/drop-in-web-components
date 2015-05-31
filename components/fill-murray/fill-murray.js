@@ -37,7 +37,7 @@
 
                         // loop through <select> attributes and apply them on <div>
                         $.each(attributes, function() {
-                            if (this.name !== 'class' && this.name !== 'data-component-name' && this.name !== 'src' && this.name !== 'id')
+                            if (this.name !== 'class' && this.name !== 'name' && this.name !== 'src' && this.name !== 'id')
                                 $component.attr(this.name, this.value);
                         });
 

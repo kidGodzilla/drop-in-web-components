@@ -17,8 +17,8 @@
             var $this = $(this);
             var dropletName = $this.prop('tagName').toLowerCase().trim();
 
-            if (!$this.attr('data-component-name'))
-                $this.attr('data-component-name', dropletName);
+            if (!$this.attr('name'))
+                $this.attr('name', dropletName);
 
             if (Droplets.cdnPath && Droplets.cdnPath[dropletName] && !$this.attr('data-source-url'))
                 $this.attr('data-source-url', Droplets.protocol() + "//" + Droplets.cdnPath[dropletName]);

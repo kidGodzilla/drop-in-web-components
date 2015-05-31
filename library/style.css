@@ -40,7 +40,7 @@
       /*}*/
 /*}*/
 
-[data-component-name]:not(.droplet-ready) {
+[name]:not(.droplet-ready) {
     visibility: hidden;
 }
 .droplet-loading {
