@@ -34,6 +34,7 @@
 
             // Not sure if the classnames are needed
             var classnames = $('#' + componentID).attr('class');
+            console.log(classnames);
             $('#' + componentID).attr('id', componentID + '-instantiator');
             $('<div id="' + componentID + '" class="' + classnames + '"></div>').insertAfter($('#' + componentID + '-instantiator'));
 
