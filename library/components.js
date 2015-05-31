@@ -29,6 +29,7 @@
      * cleaning up the instanciator.
      */
     Droplets.registerGlobal('executeAfterRender', function (componentID, callback) {
+        console.log(componentID, callback);
         $(document).ready(function () {
 
             // Not sure if the classnames are needed
@@ -53,6 +54,7 @@
             $('#' + componentID + '-instantiator').remove();
 
             // Execute the callback function (afterRender method)
+            console.log('call me back yo!');
             if (callback && typeof(callback === "function")) callback(componentID);
 
         });
