@@ -14,14 +14,14 @@ var cid = document.currentScript.id;
     if (!window._DropletResolvers) window._DropletResolvers = {};
     var tmp = (0|Math.random()*9e6).toString(36);
 
-    console.log(tmp, cid);
+    _DropletResolvers[tmp].cid = cid;
 
-    window._DropletResolvers[tmp] = setInterval(function () {
+    window._DropletResolvers[tmp].i = setInterval(function () {
         if (window.Droplets) {
             clearInterval(window._DropletResolvers[tmp]);
 
-            //console.log(cid);
-            var componentID = cid;
+            console.log(_DropletResolvers[tmp].cid);
+            var componentID = _DropletResolvers[tmp].cid;
 
             /**
              * ----------------
