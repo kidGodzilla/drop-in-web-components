@@ -99,7 +99,7 @@
         setInterval(function () {
             while (window._DropletResolvers._queue.length) {
                 var item = window._DropletResolvers._queue.shift();
-                console.log(item);
+                console.log(item, item.callback);
                 if (item && item.callback && typeof(item.callback) === "function") item.callback(item.cid);
             }
         }, 100);
