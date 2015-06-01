@@ -19,9 +19,7 @@ var cid = document.currentScript.id;
 
     function droplet (tmp) {
         if (window.Droplets) {
-            clearInterval(window._DropletResolvers[tmp]);
-
-            console.log(window._DropletResolvers[tmp].cid);
+            clearInterval(window._DropletResolvers[tmp].i);
             var componentID = window._DropletResolvers[tmp].cid;
 
             /**
