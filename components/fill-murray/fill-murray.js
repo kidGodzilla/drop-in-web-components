@@ -1,7 +1,7 @@
 /**
  * FILL-MURRAY COMPONENT
  */
-var componentID = document.currentScript.id;
+var cid = document.currentScript.id;
 
 (function () {
 
@@ -17,9 +17,9 @@ var componentID = document.currentScript.id;
     window._DropletResolvers[tmp] = setInterval(function () {
         if (window.Droplets) {
             clearInterval(window._DropletResolvers[tmp]);
-
-
-            console.log(componentID);
+            
+            console.log(cid);
+            var componentID = cid;
 
             /**
              * ----------------
