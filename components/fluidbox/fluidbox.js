@@ -23,9 +23,23 @@ var cid = document.currentScript.id;
 
                     $component = $('#' + componentID);
 
+                    $(document).ready(function () {
+                        /**
+                         * Retrieve cached innerHTML for this component
+                         */
+                        var innerHTML = Droplets.getInnerHTML(componentID);
+                        $("#" + componentID + " .fluidbox-component").html(innerHTML);
+
+                        /**
+                         * Load Fluidbox on this component
+                         */
+                        $("#" + componentID + " .fluidbox-component a").fluidbox();
+                    });
 
 
-                }
+                },
+                scripts: ['//cdnjs.cloudflare.com/ajax/libs/fluidbox/1.4.3.1/jquery.fluidbox.min.js'],
+                stylesheets: ['//cdnjs.cloudflare.com/ajax/libs/fluidbox/1.4.3.1/css/fluidbox.css']
             });
         }
     }
