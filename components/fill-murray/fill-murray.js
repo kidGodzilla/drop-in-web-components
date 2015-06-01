@@ -1,33 +1,25 @@
 /**
  * FILL-MURRAY COMPONENT
  */
+
+// BEGIN BOILERPLATE
 var cid = document.currentScript.id;
 
 (function () {
 
-    /**
-     * ----------------------------
-     * BOILERPLATE - DO NOT MODIFY |
-     * ----------------------------
-     */
     if (!window.Droplets) document.write('<script src="http://kidgodzilla.github.io/drop-in-web-components/library/loader.js"></script>');
     if (!window._DropletResolvers) window._DropletResolvers = {};
+    if (!window._DropletResolvers._queue) window._DropletResolvers.queue = [];
     var tmp = (0|Math.random()*9e6).toString(36);
+    window._DropletResolvers._queue.push(tmp);
 
     window._DropletResolvers[tmp] = {};
     window._DropletResolvers[tmp].cid = cid;
 
-    function droplet (tmp) {
+    window._DropletResolvers[tmp].callback = function (componentID) {
         if (window.Droplets) {
-            clearInterval(window._DropletResolvers[tmp].i);
-            console.log('clearing interval for ' + window._DropletResolvers[tmp].i, window._DropletResolvers[tmp].cid);
-            var componentID = window._DropletResolvers[tmp].cid;
 
-            /**
-             * ----------------
-             * END BOILERPLATE |
-             * ----------------
-             */
+            // END BOILERPLATE
             Droplets.registerComponent({
                 name: "fill-murray",
                 ID: componentID,
@@ -61,5 +53,4 @@ var cid = document.currentScript.id;
         }
     }
 
-    window._DropletResolvers[tmp].i = setInterval(droplet(tmp), 250);
 })();
