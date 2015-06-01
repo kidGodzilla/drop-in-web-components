@@ -65,7 +65,7 @@
          * Prepare components
          */
         $(document).ready(function () {
-            $('script[name][src]').each(function () {
+            $('script[id][src]').each(function () {
                 var $this = $(this);
                 var elID = $this.attr('id');
 
