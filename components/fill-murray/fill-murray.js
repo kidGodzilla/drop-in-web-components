@@ -14,7 +14,7 @@ var cid = document.currentScript.id;
     if (!window._DropletResolvers) window._DropletResolvers = {};
     var tmp = (0|Math.random()*9e6).toString(36);
 
-    _DropletResolvers[tmp].cid = cid;
+    window._DropletResolvers[tmp].cid = cid;
 
     function droplet (tmp) {
         if (window.Droplets) {
