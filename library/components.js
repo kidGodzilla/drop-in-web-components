@@ -28,12 +28,14 @@
      * the droplet constructor, Executing a callback script, and
      * cleaning up the instanciator.
      */
-    Droplets.registerGlobal('executeRender', function (componentID, callback) {
+    Droplets.registerGlobal('executeRender', function (componentID, callback, tagName) {
         $(document).ready(function () {
+
+            tagName = tagName || "div";
 
             // Instanciates a new droplet and transitions it to the ready state
             $('#' + componentID).attr('id', componentID + '-instantiator');
-            $('<div id="' + componentID + '"></div>').insertAfter($('#' + componentID + '-instantiator'));
+            $('<' + tagName + ' id="' + componentID + '"></' + tagName + '>').insertAfter($('#' + componentID + '-instantiator'));
 
             var $component = $('#' + componentID);
             var attributes = $('#' + componentID + '-instantiator').prop("attributes");
@@ -96,7 +98,8 @@
                     var obj = Droplets.componentLookup[elID];
 
                     // if (obj && obj.beforeRender && typeof(obj.beforeRender) === "function") obj.beforeRender(elID);
-                    if (obj && obj.render && typeof(obj.render) === "function") Droplets.executeRender(elID, obj.render);
+                    var tagName = (obj && obj.name) ? obj.name : "div";
+                    if (obj && obj.render && typeof(obj.render) === "function") Droplets.executeRender(elID, obj.render, tagName);
                     // if (obj && obj.afterRender && typeof(obj.afterRender) === "function") obj.afterRender(elID);
                 });
             }

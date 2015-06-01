@@ -19,6 +19,7 @@ var cid = document.currentScript.id;
                 ID: componentID,
 
                 // END BOILERPLATE
+                name: 'isotope-filter',
                 render: function (componentID, $component) {
 
                     $(document).ready(function () {
