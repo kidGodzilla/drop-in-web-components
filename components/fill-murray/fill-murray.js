@@ -31,8 +31,8 @@ var cid = document.currentScript.id;
                     /**
                      * Retrieve cached innerHTML for this component
                      */
-                    var innerHTML = Droplets.getInnerHTML(componentID);
-                    $component.html(innerHTML);
+                    //var innerHTML = Droplets.getInnerHTML(componentID);
+                    //$component.html(innerHTML);
 
                     /**
                      * Get & nice variables, set defaults, etc.
