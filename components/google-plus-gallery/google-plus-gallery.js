@@ -19,13 +19,19 @@ var cid = document.currentScript.id;
                 ID: componentID,
 
                 // END BOILERPLATE
-                render: function (componentID) {
+                render: function (componentID, $component) {
 
-                    $component = $('#' + componentID);
+                    $(document).ready(function () {
+                        var userID = $component.attr('data-user-id');
+                        $component.nanoGallery({
+                            kind: 'picasa',
+                            userID: userID
+                        });
+                    });
 
-
-
-                }
+                },
+                scripts: ['https://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.5.4/jquery.nanogallery.min.js'],
+                stylesheets: ['https://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.5.4/css/nanogallery.min.css']
             });
         }
     }

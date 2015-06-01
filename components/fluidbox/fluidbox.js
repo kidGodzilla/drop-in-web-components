@@ -31,10 +31,7 @@ var cid = document.currentScript.id;
                         /**
                          * Load Fluidbox on this component
                          */
-                        setTimeout(function () {
-                            $component.fluidbox();
-                        }, 250);
-
+                        $component.fluidbox();
                     });
 
 
