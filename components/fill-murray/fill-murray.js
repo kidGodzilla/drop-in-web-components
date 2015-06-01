@@ -17,6 +17,7 @@ var cid = document.currentScript.id;
     window._DropletResolvers[tmp].cid = cid;
 
     window._DropletResolvers[tmp].callback = function (componentID) {
+        console.log(componentID);
         if (window.Droplets) {
 
             // END BOILERPLATE
