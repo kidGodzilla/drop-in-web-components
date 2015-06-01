@@ -23,9 +23,7 @@ var cid = document.currentScript.id;
                 ID: componentID,
 
                 // END BOILERPLATE
-                render: function (componentID) {
-
-                    $component = $('#' + componentID);
+                render: function (componentID, $component) {
 
                     /**
                      * Get & nice variables, set defaults, etc.

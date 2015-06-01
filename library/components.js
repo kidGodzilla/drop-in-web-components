@@ -48,7 +48,7 @@
             $('#' + componentID + '-instantiator').remove();
 
             // Execute the callback function (afterRender method)
-            if (callback && typeof(callback === "function")) callback(componentID);
+            if (callback && typeof(callback === "function")) callback(componentID, $component);
 
         });
     });

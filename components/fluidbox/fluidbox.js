@@ -19,21 +19,19 @@ var cid = document.currentScript.id;
                 ID: componentID,
 
                 // END BOILERPLATE
-                render: function (componentID) {
-
-                    $component = $('#' + componentID);
+                render: function (componentID, $component) {
 
                     $(document).ready(function () {
                         /**
                          * Retrieve cached innerHTML for this component
                          */
                         var innerHTML = Droplets.getInnerHTML(componentID);
-                        $("#" + componentID + " .fluidbox-component").html(innerHTML);
+                        $component.html(innerHTML);
 
                         /**
                          * Load Fluidbox on this component
                          */
-                        $("#" + componentID + " .fluidbox-component a").fluidbox();
+                        $component.fluidbox();
                     });
 
 
