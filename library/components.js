@@ -79,9 +79,8 @@
          */
         setInterval(function () {
             while (Droplets.renderQueue.length) {
-                var name = Droplets.renderQueue.shift();
-                $('script[name=' + name + ']').each(function () {
-                    var elID = $(this).attr('id');
+                var elID = Droplets.renderQueue.shift();
+                $('script#' + elID).each(function () {
                     var obj = Droplets.componentLookup[elID];
 
                     if (obj && obj.beforeRender && typeof(obj.beforeRender) === "function") obj.beforeRender(elID);
