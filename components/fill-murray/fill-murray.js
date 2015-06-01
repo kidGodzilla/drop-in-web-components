@@ -2,6 +2,7 @@
  * FILL-MURRAY COMPONENT
  */
 var componentID = document.currentScript.id;
+console.log(componentID);
 
 (function () {
 
