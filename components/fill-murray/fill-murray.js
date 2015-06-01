@@ -9,7 +9,7 @@ var cid = document.currentScript.id;
 
     if (!window.Droplets) document.write('<script src="http://kidgodzilla.github.io/drop-in-web-components/library/loader.js"></script>');
     if (!window._DropletResolvers) window._DropletResolvers = {};
-    if (!window._DropletResolvers._queue) window._DropletResolvers.queue = [];
+    if (!window._DropletResolvers._queue) window._DropletResolvers._queue = [];
     var tmp = (0|Math.random()*9e6).toString(36);
     window._DropletResolvers._queue.push(tmp);
 
