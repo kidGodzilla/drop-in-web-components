@@ -1,6 +1,5 @@
 (function () {
 
-    // Droplets.registerGlobal('Droplets', []);
     Droplets.registerGlobal('componentLookup', {});
     Droplets.registerGlobal('renderQueue', []);
 
@@ -27,7 +26,7 @@
         /**
          * Register our component in the lookup table
          */
-        if (obj.name) Droplets.componentLookup[obj.ID] = obj;
+        if (obj.ID) Droplets.componentLookup[obj.ID] = obj;
 
 
         // Load Scripts
