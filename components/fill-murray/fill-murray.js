@@ -2,7 +2,6 @@
  * FILL-MURRAY COMPONENT
  */
 var componentID = document.currentScript.id;
-console.log(componentID);
 
 (function () {
 
@@ -18,6 +17,9 @@ console.log(componentID);
     window._DropletResolvers[tmp] = setInterval(function () {
         if (window.Droplets) {
             clearInterval(window._DropletResolvers[tmp]);
+
+
+            console.log(componentID);
 
             /**
              * ----------------
