@@ -14,12 +14,14 @@ var cid = document.currentScript.id;
     if (!window._DropletResolvers) window._DropletResolvers = {};
     var tmp = (0|Math.random()*9e6).toString(36);
 
-    window._DropletResolvers[tmp].i = setInterval(function (cid) {
+    _DropletResolvers[tmp].cid = cid;
+
+    function droplet (tmp) {
         if (window.Droplets) {
             clearInterval(window._DropletResolvers[tmp]);
 
-            console.log(cid);
-            var componentID = cid;
+            console.log(window._DropletResolvers[tmp].cid);
+            var componentID = window._DropletResolvers[tmp].cid;
 
             /**
              * ----------------
@@ -57,5 +59,7 @@ var cid = document.currentScript.id;
                 }
             });
         }
-    }, 250);
+    }
+
+    window._DropletResolvers[tmp].i = setInterval(droplet(tmp), 250);
 })();
