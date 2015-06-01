@@ -29,12 +29,6 @@ var cid = document.currentScript.id;
                     $component = $('#' + componentID);
 
                     /**
-                     * Retrieve cached innerHTML for this component
-                     */
-                    //var innerHTML = Droplets.getInnerHTML(componentID);
-                    //$component.html(innerHTML);
-
-                    /**
                      * Get & nice variables, set defaults, etc.
                      */
                     var width = $component.attr('data-width') || 200;
