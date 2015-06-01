@@ -71,6 +71,8 @@
 
                 if (elID) Droplets.innerHTML[elID] = $this.html();
             });
+
+            Droplets.HTMLIncludes();
         });
 
         /**
