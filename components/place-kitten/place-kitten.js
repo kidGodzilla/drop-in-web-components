@@ -1,5 +1,5 @@
 /**
- * PLACEKITTEN COMPONENT
+ * PLACE-KITTEN COMPONENT
  */
 
 // BEGIN BOILERPLATE
@@ -27,20 +27,7 @@ var cid = document.currentScript.id;
 
                     $component = $('#' + componentID);
 
-                    /**
-                     * Get & nice variables, set defaults, etc.
-                     */
-                    var width = $component.attr('data-width') || 200;
-                    var height = $component.attr('data-height') || 200;
-                    if (width) width = parseInt(width);
-                    if (height) height = parseInt(height);
-                    if (typeof(width) !== "number") width = 200;
-                    if (typeof(height) !== "number") height = 200;
 
-                    /**
-                     * Load Bill Murray on this component
-                     */
-                    $component.append('<img src="http://www.fillmurray.com/' + width + '/' + height + '/">');
 
                 }
             });
