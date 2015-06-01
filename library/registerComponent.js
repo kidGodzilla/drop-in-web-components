@@ -27,7 +27,7 @@
         /**
          * Register our component in the lookup table
          */
-        if (obj.name) Droplets.componentLookup[obj.name] = obj;
+        if (obj.name) Droplets.componentLookup[obj.ID] = obj;
 
 
         // Load Scripts

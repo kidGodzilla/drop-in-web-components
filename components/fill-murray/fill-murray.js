@@ -1,7 +1,8 @@
 /**
  * FILL-MURRAY COMPONENT
  */
-console.log(document.currentScript.id);
+var componentID = document.currentScript.id;
+
 (function () {
 
     /**
@@ -24,6 +25,7 @@ console.log(document.currentScript.id);
              */
             Droplets.registerComponent({
                 name: "fill-murray",
+                ID: componentID,
                 render: function (componentID) {
 
                     $component = $('#' + componentID);

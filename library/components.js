@@ -82,7 +82,7 @@
                 var name = Droplets.renderQueue.shift();
                 $('script[name=' + name + ']').each(function () {
                     var elID = $(this).attr('id');
-                    var obj = Droplets.componentLookup[name];
+                    var obj = Droplets.componentLookup[elID];
 
                     if (obj && obj.beforeRender && typeof(obj.beforeRender) === "function") obj.beforeRender(elID);
                     if (obj && obj.render && typeof(obj.render) === "function") Droplets.executeRender(elID, obj.render);
