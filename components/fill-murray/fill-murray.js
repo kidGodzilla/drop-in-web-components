@@ -16,7 +16,7 @@ var cid = document.currentScript.id;
 
     _DropletResolvers[tmp].cid = cid;
 
-    window._DropletResolvers[tmp].i = setInterval(function () {
+    window._DropletResolvers[tmp].i = setInterval(function (tmp) {
         if (window.Droplets) {
             clearInterval(window._DropletResolvers[tmp]);
 
