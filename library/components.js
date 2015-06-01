@@ -73,6 +73,15 @@
             });
         });
 
+        /**
+         * Begin registering components after Droplet is instantiated
+         */
+        setInterval(function () {
+            while (window._DropletResolvers._queue.length) {
+                var item = window._DropletResolvers[window._DropletResolvers._queue.shift()];
+                if (item && item.callback && typeof(item.callback) === "function") item.callback(item.cid);
+            }
+        }, 100);
 
         /**
          * Run component scripts as they are loaded
@@ -88,18 +97,6 @@
                     if (obj && obj.render && typeof(obj.render) === "function") Droplets.executeRender(elID, obj.render);
                     // if (obj && obj.afterRender && typeof(obj.afterRender) === "function") obj.afterRender(elID);
                 });
-            }
-        }, 100);
-
-        // window._DropletResolvers._queue
-
-        /**
-         * Begin registering components after Droplet is instantiated
-         */
-        setInterval(function () {
-            while (window._DropletResolvers._queue.length) {
-                var item = window._DropletResolvers[window._DropletResolvers._queue.shift()];
-                if (item && item.callback && typeof(item.callback) === "function") item.callback(item.cid);
             }
         }, 100);
 
